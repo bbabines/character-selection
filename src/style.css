@@ -9,6 +9,37 @@ body,
 	background: ivory;
 }
 
+.appearance-container {
+	width: 20em;
+
+	display: flex;
+	flex-direction: column;
+
+	position: absolute;
+	bottom: 10em;
+	right: 25em;
+
+	gap: 0.25em;
+}
+
+.body-type-container {
+	display: flex;
+
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sex-container {
+	display: flex;
+	gap: 0.5em;
+
+	position: absolute;
+	top: 20em;
+	right: 30em;
+}
+
+/* Name */
+
 input {
 	font-size: 1.5rem;
 	font-weight: 500;
@@ -29,7 +60,7 @@ input {
 	align-items: center;
 
 	position: absolute;
-	bottom: 10em;
+	bottom: 12em;
 	left: -6.2em;
 }
 
@@ -52,6 +83,4 @@ input {
 	position: absolute;
 	top: 12em;
 	left: 10em;
-	/* bottom: 13em; */
-	/* left: -6.5em; */
 }
