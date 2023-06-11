@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { OrbitControls, Html, PresentationControls } from "@react-three/drei";
 
 import FemaleC from "./model-components/FemaleC";
 
 export default function Experience() {
+	const [displayedNmae, setDisplayedName] = useState();
+
 	return (
 		<>
 			{/* <OrbitControls makeDefault /> */}
@@ -22,6 +25,20 @@ export default function Experience() {
 			>
 				<FemaleC />
 			</PresentationControls>
+
+			<Html>
+				<div className="name-input-container">
+					Name
+					<input
+						type="text"
+						onChange={(event) => setDisplayedName(event.target.value)}
+					/>
+				</div>
+			</Html>
+
+			<Html>
+				<div className="displayed-name">{displayedNmae}</div>
+			</Html>
 		</>
 	);
 }
