@@ -133,9 +133,87 @@ const Interface = () => {
 				</div>
 			</Html>
 
+			{/* Faction */}
+			<Html>
+				<button className="faction-button-one">
+					Faction One
+					<img
+						src="/faction-one.svg"
+						alt="Faction one"
+						className="faction-symbol-one"
+					/>
+				</button>
+				<button className="faction-button-two">
+					Faction Two
+					<img
+						src="/faction-two.svg"
+						alt="Faction two"
+						className="faction-symbol-two"
+					/>
+				</button>
+			</Html>
+
 			{/* Description */}
 			<Html>
-				<div className="description-container">Description</div>
+				<div className="description-container">
+					<p className="description">
+						Welcome to the character selection screen of "Legends of Aetheria,"
+						the ultimate action combat MMORPG! In this epic virtual world, you
+						will embark on a thrilling adventure filled with danger, magic, and
+						unimaginable challenges. As you prepare to shape your destiny,
+						choose your character wisely, for their unique abilities and skills
+						will determine your triumphs and victories in this extraordinary
+						realm.
+					</p>
+					<p className="faction-title">Please Choose Your Faction:</p>
+					<p className="faction-description">
+						<img
+							src="/faction-one.svg"
+							alt="Faction one"
+							className="faction-one-description"
+						/>
+						The Order of the Silver Dawn - Noble warriors committed to justice,
+						protecting the innocent, and restoring peace to the realm.
+					</p>
+					{/* <p>
+						Faction 1: The Order of the Silver Dawn The Order of the Silver Dawn
+						is a renowned faction of noble warriors and valiant defenders.
+						Committed to upholding justice and protecting the innocent, they
+						stand as beacons of hope in a world plagued by darkness. Clad in
+						gleaming armor, their ranks are filled with knights, paladins, and
+						righteous champions who wield weapons imbued with holy power.
+						Through unwavering devotion and a strict code of honor, the Order of
+						the Silver Dawn seeks to vanquish evil, cleanse corrupted lands, and
+						restore peace and balance to the realm. Join their ranks and become
+						a paragon of righteousness, fighting for the greater good and
+						vanquishing all who would threaten the sanctity of Aetheria.
+					</p> */}
+					<p>
+						<img
+							src="/faction-two.svg"
+							alt="Faction two"
+							className="faction-two-description"
+						/>
+						The Shadow Syndicate - Masters of secrecy and manipulation, skilled
+						in espionage, assassination, and subterfuge, operating in the
+						shadows to shape the fate of Aetheria.
+					</p>
+					{/* <p>
+							Steeped in secrecy and whispers, the Shadow Syndicate is a
+							clandestine faction that operates in the shadows, manipulating
+							events and weaving a web of intrigue. Masters of espionage,
+							assassination, and subterfuge, they thrive in the darkness,
+							exploiting the weaknesses of their enemies. Whether you are a
+							cunning rogue, a skilled spy, or a deadly assassin, the Shadow
+							Syndicate offers you the chance to delve into a world of secrecy
+							and power. With their vast network of informants, expertise in
+							covert operations, and the ability to strike from the shadows, the
+							Shadow Syndicate plays a dangerous game, seeking to control the
+							fate of Aetheria without revealing their true intentions. Embrace
+							the shadows and unlock the true potential of deception and
+							manipulation as you navigate a world where nothing is as it seems.
+						</p> */}
+				</div>
 			</Html>
 
 			{/* Displayed Name */}
