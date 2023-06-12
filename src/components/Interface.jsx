@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Html } from "@react-three/drei";
 
-const Interface = () => {
+const Interface = ({ BodyTypeSection, setBodyTypeSection }) => {
 	const [displayedNmae, setDisplayedName] = useState("");
 	const [appearanceTab, setAppearanceTab] = useState(1);
 
@@ -17,8 +17,19 @@ const Interface = () => {
 			{/* Appearance */}
 			<Html>
 				<div className="appearance-container">
-					<button onClick={() => setAppearanceTab(1)}>Body Type</button>
+					<button
+						onClick={() => {
+							setAppearanceTab(1);
+						}}
+					>
+						Body Type
+					</button>
 					<div
+						// onClick={() => {
+						// 	setBodyTypeSection(1);
+
+						// 	console.log(BodyTypeSection + "UI");
+						// }}
 						className={`${
 							appearanceTab === 1
 								? "body-type-container, active "
@@ -33,6 +44,7 @@ const Interface = () => {
 							alt="Female A"
 							onClick={() => {
 								setBodyAppearance(1);
+								setBodyTypeSection(1);
 							}}
 						/>
 
@@ -44,6 +56,7 @@ const Interface = () => {
 							alt="Female B"
 							onClick={() => {
 								setBodyAppearance(1);
+								setBodyTypeSection(2);
 							}}
 						/>
 
@@ -55,6 +68,7 @@ const Interface = () => {
 							alt="Female C"
 							onClick={() => {
 								setBodyAppearance(1);
+								setBodyTypeSection(3);
 							}}
 						/>
 					</div>

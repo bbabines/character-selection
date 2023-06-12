@@ -11,14 +11,13 @@ export default function FemaleC(props) {
 	const { actions, names } = useAnimations(animations, group);
 
 	useEffect(() => {
-		// actions[names[4]].reset()fadeIn(0.5).play();
 		actions[names[4]].play();
 	}, []);
 
 	return (
 		<group ref={group} {...props} dispose={null}>
-			<group name="Female_C" position={[0, -0.8, 0]}>
-				<group name="Female_C_1">
+			<group name="Female_C" position={[0, -0.9, 0]}>
+				<group name="Female_C_1" scale={0.98}>
 					<group
 						name="Character"
 						position={[0, 0.92, 0]}
@@ -365,6 +364,26 @@ export default function FemaleC(props) {
 												<primitive
 													object={
 														nodes.Set_Character_Character_Head_Female_Head_2
+													}
+												/>
+												<primitive
+													object={
+														nodes.Set_Character_Character_Head_Female_Hair_3
+													}
+												/>
+												<primitive
+													object={
+														nodes.Set_Character_Character_Head_Female_Hair_1
+													}
+												/>
+												<primitive
+													object={
+														nodes.Set_Character_Character_Head_Female_Hair_2
+													}
+												/>
+												<primitive
+													object={
+														nodes.Set_Character_Character_Head_Female_Hair_4
 													}
 												/>
 											</group>
@@ -718,6 +737,70 @@ export default function FemaleC(props) {
 							}
 							position={[0, 1.42, -0.04]}
 							rotation={[1.57, Math.PI / 2, 0]}
+						/>
+					</group>
+					<group name="Set_Character_Female_Hair_3" scale={1.02}>
+						<skinnedMesh
+							name="Set_Character_Female_Hair_3_1"
+							geometry={nodes.Set_Character_Female_Hair_3_1.geometry}
+							material={materials.Female_Hair_3}
+							skeleton={nodes.Set_Character_Female_Hair_3_1.skeleton}
+							morphTargetDictionary={
+								nodes.Set_Character_Female_Hair_3_1.morphTargetDictionary
+							}
+							morphTargetInfluences={
+								nodes.Set_Character_Female_Hair_3_1.morphTargetInfluences
+							}
+							position={[0, 1.42, -0.04]}
+							rotation={[1.57, Math.PI / 2, 0]}
+						/>
+					</group>
+					<group name="Set_Character_Female_Hair_1" scale={1.02}>
+						<skinnedMesh
+							name="Set_Character_Female_Hair_1_1"
+							geometry={nodes.Set_Character_Female_Hair_1_1.geometry}
+							material={materials.Female_Hair_1}
+							skeleton={nodes.Set_Character_Female_Hair_1_1.skeleton}
+							morphTargetDictionary={
+								nodes.Set_Character_Female_Hair_1_1.morphTargetDictionary
+							}
+							morphTargetInfluences={
+								nodes.Set_Character_Female_Hair_1_1.morphTargetInfluences
+							}
+							position={[0, 1.42, -0.04]}
+							rotation={[Math.PI / 2, Math.PI / 2, 0]}
+						/>
+					</group>
+					<group name="Set_Character_Female_Hair_2" scale={1.02}>
+						<skinnedMesh
+							name="Set_Character_Female_Hair_2_1"
+							geometry={nodes.Set_Character_Female_Hair_2_1.geometry}
+							material={materials.Female_Hair_2}
+							skeleton={nodes.Set_Character_Female_Hair_2_1.skeleton}
+							morphTargetDictionary={
+								nodes.Set_Character_Female_Hair_2_1.morphTargetDictionary
+							}
+							morphTargetInfluences={
+								nodes.Set_Character_Female_Hair_2_1.morphTargetInfluences
+							}
+							position={[0, 1.42, -0.04]}
+							rotation={[Math.PI / 2, 1.57, 0]}
+						/>
+					</group>
+					<group name="Set_Character_Female_Hair_4" scale={1.02}>
+						<skinnedMesh
+							name="Set_Character_Female_Hair_4_1"
+							geometry={nodes.Set_Character_Female_Hair_4_1.geometry}
+							material={materials.Female_Hair_4}
+							skeleton={nodes.Set_Character_Female_Hair_4_1.skeleton}
+							morphTargetDictionary={
+								nodes.Set_Character_Female_Hair_4_1.morphTargetDictionary
+							}
+							morphTargetInfluences={
+								nodes.Set_Character_Female_Hair_4_1.morphTargetInfluences
+							}
+							position={[0, 1.42, -0.04]}
+							rotation={[Math.PI / 2, Math.PI / 2, 0]}
 						/>
 					</group>
 				</group>
