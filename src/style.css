@@ -37,13 +37,15 @@ button {
 	display: none;
 }
 
-/* Appearance */
+/* Appearance  UI*/
 
 .appearance-container {
-	width: 20em;
+	width: 28em;
 
 	display: flex;
 	flex-direction: column;
+
+	background-color: rgba(0, 0, 0, 0.3);
 
 	position: absolute;
 	bottom: 10em;
@@ -52,7 +54,19 @@ button {
 	gap: 0.05em;
 }
 
-/* Skin Tone */
+/* Body Type UI */
+
+.body-type {
+	display: flex;
+	align-items: center;
+	max-width: 29%;
+}
+
+.body-type:hover {
+	border: 1px solid white;
+}
+
+/* Skin Tone UI */
 
 .skin-tone {
 	width: 33%;
@@ -78,7 +92,7 @@ button {
 	background-color: #57321f;
 }
 
-/* Female Hair */
+/* Female Hair UI*/
 
 .hair-style {
 	display: flex;
@@ -110,6 +124,42 @@ button {
 	position: absolute;
 	top: 20em;
 	right: 30em;
+}
+
+.male-button,
+.female-button {
+	width: 120px;
+	height: 50px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.male-button:hover,
+.female-button:hover {
+	border: 1px solid white;
+}
+
+.male-symbol,
+.female-symbol {
+	max-width: 50px;
+}
+
+/* Description */
+
+.description-container {
+	width: 400px;
+	height: 400px;
+
+	position: absolute;
+	left: 20em;
+	bottom: -6em;
+
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Name */
@@ -152,9 +202,9 @@ input {
 
 	font-size: 1.5rem;
 	color: white;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.6);
 
 	position: absolute;
 	top: 12em;
-	left: 10em;
+	left: 13em;
 }

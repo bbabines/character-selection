@@ -27,7 +27,7 @@ const Interface = () => {
 					>
 						<img
 							className={`${
-								bodyAppearance === 1 ? "body-type, active" : "body-type "
+								bodyAppearance === 1 ? "body-type" : "body-type "
 							} `}
 							src="/FemaleA.png"
 							alt="Female A"
@@ -38,7 +38,7 @@ const Interface = () => {
 
 						<img
 							className={`${
-								bodyAppearance === 1 ? "body-type, active" : "body-type "
+								bodyAppearance === 1 ? "body-type" : "body-type "
 							} `}
 							src="/FemaleB.png"
 							alt="Female B"
@@ -49,7 +49,7 @@ const Interface = () => {
 
 						<img
 							className={`${
-								bodyAppearance === 1 ? "body-type, active" : "body-type "
+								bodyAppearance === 1 ? "body-type" : "body-type "
 							} `}
 							src="/FemaleC.png"
 							alt="Female C"
@@ -114,9 +114,28 @@ const Interface = () => {
 			{/* Sex */}
 			<Html>
 				<div className="sex-container">
-					<button>Male</button>
-					<button>Female</button>
+					<button className="male-button">
+						Male
+						<img
+							src="/male-symbol.png"
+							alt="Male sex symbol"
+							className="male-symbol"
+						/>
+					</button>
+					<button className="female-button">
+						Female
+						<img
+							src="/female-symbol.png"
+							alt="Female sex symbol"
+							className="female-symbol"
+						/>
+					</button>
 				</div>
+			</Html>
+
+			{/* Description */}
+			<Html>
+				<div className="description-container">Description</div>
 			</Html>
 
 			{/* Displayed Name */}
@@ -132,6 +151,7 @@ const Interface = () => {
 						type="text"
 						onChange={(event) => setDisplayedName(event.target.value)}
 					/>
+					{/* <button>Create Character</button> */}
 				</div>
 			</Html>
 		</>
