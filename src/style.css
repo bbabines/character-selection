@@ -9,6 +9,14 @@ body,
 	background: ivory;
 }
 
+.active {
+	display: block;
+}
+
+.inactive {
+	display: none;
+}
+
 .appearance-container {
 	width: 20em;
 
