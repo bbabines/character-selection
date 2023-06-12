@@ -1,13 +1,9 @@
-import { useState } from "react";
-import { OrbitControls, Html, PresentationControls } from "@react-three/drei";
+import { OrbitControls, PresentationControls } from "@react-three/drei";
 
 import Interface from "./components/Interface";
 import FemaleC from "./model-components/FemaleC";
 
 export default function Experience() {
-	const [displayedNmae, setDisplayedName] = useState("");
-	const [appearanceTab, setAppearanceTab] = useState(0);
-
 	return (
 		<>
 			{/* <OrbitControls makeDefault /> */}

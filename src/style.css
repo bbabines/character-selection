@@ -10,7 +10,15 @@ body,
 }
 
 .active {
+	height: 5em;
+
 	display: block;
+	display: flex;
+
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+	border: 1px solid black;
+	border-radius: 3px;
 }
 
 .inactive {
@@ -86,7 +94,7 @@ input {
 
 	font-size: 1.5rem;
 	color: white;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.4);
 
 	position: absolute;
 	top: 12em;
