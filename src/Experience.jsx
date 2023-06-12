@@ -1,6 +1,8 @@
 import { OrbitControls, PresentationControls } from "@react-three/drei";
 
 import Interface from "./components/Interface";
+import FemaleA from "./model-components/FemaleA";
+import FemaleB from "./model-components/FemaleB";
 import FemaleC from "./model-components/FemaleC";
 
 export default function Experience() {
@@ -20,7 +22,9 @@ export default function Experience() {
 				snap={false} // Snap-back to center (can also be a spring config)
 				speed={3} // Speed factor
 			>
-				<FemaleC scale={2} />
+				<FemaleA scale={2} />
+				{/* <FemaleB scale={2} /> */}
+				{/* <FemaleC scale={2} /> */}
 			</PresentationControls>
 		</>
 	);

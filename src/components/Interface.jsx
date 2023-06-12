@@ -25,28 +25,38 @@ const Interface = () => {
 								: "body-type-container, inactive "
 						} `}
 					>
-						<div
+						<img
 							className={`${
 								bodyAppearance === 1 ? "body-type, active" : "body-type "
 							} `}
+							src="/FemaleA.png"
+							alt="Female A"
 							onClick={() => {
 								setBodyAppearance(1);
 							}}
-						>
-							Body Type 1
-						</div>
-						<div
+						/>
+
+						<img
 							className={`${
-								bodyAppearance === 2 ? "body-type, active" : "body-type  "
+								bodyAppearance === 1 ? "body-type, active" : "body-type "
 							} `}
+							src="/FemaleB.png"
+							alt="Female B"
 							onClick={() => {
-								setBodyAppearance(2);
+								setBodyAppearance(1);
 							}}
-						>
-							Body Type 2
-						</div>
-						<div className="body-type ">Body Type 3</div>
-						<div className="body-type">Body Type 4</div>
+						/>
+
+						<img
+							className={`${
+								bodyAppearance === 1 ? "body-type, active" : "body-type "
+							} `}
+							src="/FemaleC.png"
+							alt="Female C"
+							onClick={() => {
+								setBodyAppearance(1);
+							}}
+						/>
 					</div>
 					<button onClick={() => setAppearanceTab(2)}>Skin Tone</button>
 					<div
