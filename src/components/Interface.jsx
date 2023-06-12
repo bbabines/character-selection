@@ -3,7 +3,10 @@ import { Html } from "@react-three/drei";
 
 const Interface = () => {
 	const [displayedNmae, setDisplayedName] = useState("");
-	const [appearanceTab, setAppearanceTab] = useState(0);
+	const [appearanceTab, setAppearanceTab] = useState(1);
+
+	const [bodyAppearance, setBodyAppearance] = useState(1);
+
 	return (
 		<>
 			{/* Background */}
@@ -22,10 +25,28 @@ const Interface = () => {
 								: "body-type-container, inactive "
 						} `}
 					>
-						<div className="body-type-one">Body Type 1</div>
-						<div className="body-type-two">Body Type 2</div>
-						<div className="body-type-three">Body Type 3</div>
-						<div className="body-type-four">Body Type 4</div>
+						<div
+							className={`${
+								bodyAppearance === 1 ? "body-type, active" : "body-type "
+							} `}
+							onClick={() => {
+								setBodyAppearance(1);
+							}}
+						>
+							Body Type 1
+						</div>
+						<div
+							className={`${
+								bodyAppearance === 2 ? "body-type, active" : "body-type  "
+							} `}
+							onClick={() => {
+								setBodyAppearance(2);
+							}}
+						>
+							Body Type 2
+						</div>
+						<div className="body-type ">Body Type 3</div>
+						<div className="body-type">Body Type 4</div>
 					</div>
 					<button onClick={() => setAppearanceTab(2)}>Skin Tone</button>
 					<div
@@ -35,10 +56,10 @@ const Interface = () => {
 								: "body-type-container, inactive "
 						} `}
 					>
-						<div className="body-type-one">Skin Tone 1</div>
-						<div className="body-type-two">Skin Tone 2</div>
-						<div className="body-type-three">Skin Tone 3</div>
-						<div className="body-type-four">Skin Tone 4</div>
+						<div className="skin-tone one"></div>
+						<div className="skin-tone two"></div>
+						<div className="skin-tone three"></div>
+						<div className="skin-tone four"></div>
 					</div>
 					<button onClick={() => setAppearanceTab(3)}>Hair Style</button>
 					<div
@@ -48,10 +69,34 @@ const Interface = () => {
 								: "body-type-container, inactive "
 						} `}
 					>
-						<div className="body-type-one">Hair Style 1</div>
-						<div className="body-type-two">Hair Style 2</div>
-						<div className="body-type-three">Hair Style 3</div>
-						<div className="body-type-four">Hair Style 4</div>
+						<div className="hair-style">
+							<img
+								className="female-hair"
+								src="/female-hair-one.png"
+								alt="First choice of female hair"
+							/>
+						</div>
+						<div className="hair-style">
+							<img
+								className="female-hair"
+								src="/female-hair-two.png"
+								alt="First choice of female hair"
+							/>
+						</div>
+						<div className="hair-style">
+							<img
+								className="female-hair"
+								src="/female-hair-three.png"
+								alt="First choice of female hair"
+							/>
+						</div>
+						<div className="hair-style">
+							<img
+								className="female-hair"
+								src="/female-hair-four.png"
+								alt="First choice of female hair"
+							/>
+						</div>
 					</div>
 				</div>
 			</Html>

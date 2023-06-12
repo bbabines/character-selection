@@ -9,6 +9,18 @@ body,
 	background: ivory;
 }
 
+button {
+	height: 2.5em;
+
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+
+	border: 1px solid black;
+	border-radius: 3px;
+
+	cursor: pointer;
+}
+
 .active {
 	height: 5em;
 
@@ -25,6 +37,8 @@ body,
 	display: none;
 }
 
+/* Appearance */
+
 .appearance-container {
 	width: 20em;
 
@@ -35,14 +49,58 @@ body,
 	bottom: 10em;
 	right: 25em;
 
-	gap: 0.25em;
+	gap: 0.05em;
 }
 
-.body-type-container {
-	display: flex;
+/* Skin Tone */
 
-	color: white;
-	background-color: rgba(0, 0, 0, 0.6);
+.skin-tone {
+	width: 33%;
+}
+
+.skin-tone:hover {
+	border: 1px solid white;
+}
+
+.skin-tone:nth-child(1) {
+	background-color: #f8a378;
+}
+
+.skin-tone:nth-child(2) {
+	background-color: #c87448;
+}
+
+.skin-tone:nth-child(3) {
+	background-color: #c87448;
+}
+
+.skin-tone:nth-child(4) {
+	background-color: #57321f;
+}
+
+/* Female Hair */
+
+.hair-style {
+	display: flex;
+	align-items: center;
+	max-width: 33%;
+}
+
+.hair-style:hover {
+	border: 1px solid white;
+}
+
+.female-hair {
+	max-width: 100%;
+}
+
+.body-type,
+.skin-tone,
+.hair-style {
+	border: 1px solid black;
+
+	padding: 0.25em;
+	margin: 0.25em;
 }
 
 .sex-container {
