@@ -11,6 +11,8 @@ export default function FemaleA(props) {
 		actions[names[4]].play();
 	}, []);
 
+	// material-color={props.skinTone}
+
 	return (
 		<group ref={group} {...props} dispose={null}>
 			<group name="Female_A" position={[0, -0.9, 0]}>
@@ -650,6 +652,7 @@ export default function FemaleA(props) {
 							name="Set_Character_Female_Torso_3_1"
 							rotation={[-Math.PI / 2, 0, 0]}
 						>
+							{/* SHIRT & Gloves*/}
 							<skinnedMesh
 								name="Set_Character_Female_Torso_3_2"
 								geometry={nodes.Set_Character_Female_Torso_3_2.geometry}
@@ -662,6 +665,7 @@ export default function FemaleA(props) {
 									nodes.Set_Character_Female_Torso_3_2.morphTargetInfluences
 								}
 							/>
+							{/* CHEST & ARMS*/}
 							<skinnedMesh
 								name="Set_Character_Female_Torso_3_3"
 								geometry={nodes.Set_Character_Female_Torso_3_3.geometry}
@@ -673,9 +677,13 @@ export default function FemaleA(props) {
 								morphTargetInfluences={
 									nodes.Set_Character_Female_Torso_3_3.morphTargetInfluences
 								}
+								// Not working...
+								// material-color={props.skinTone}
 							/>
 						</group>
 					</group>
+
+					{/* PANTS */}
 					<group name="Set_Character_Female_Legs_2">
 						<skinnedMesh
 							name="Set_Character_Female_Legs_2_1"
@@ -691,6 +699,8 @@ export default function FemaleA(props) {
 							rotation={[-Math.PI / 2, 0, 0]}
 						/>
 					</group>
+
+					{/* FACE */}
 					<group name="Set_Character_Female_Head_3">
 						<skinnedMesh
 							name="Set_Character_Female_Head_3_1"
@@ -705,6 +715,8 @@ export default function FemaleA(props) {
 							}
 							position={[0, 1.42, -0.04]}
 							rotation={[Math.PI / 2, Math.PI / 2, 0]}
+							// Not working..
+							// material-color={props.skinTone}
 						/>
 					</group>
 

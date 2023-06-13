@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Html } from "@react-three/drei";
 
-const Interface = ({ BodyTypeSection, setBodyTypeSection }) => {
-	const [displayedNmae, setDisplayedName] = useState("");
+const Interface = ({ setBodyTypeSection, setSkinToneColor }) => {
+	const [displayedName, setDisplayedName] = useState("");
 	const [appearanceTab, setAppearanceTab] = useState(1);
 
 	const [bodyAppearance, setBodyAppearance] = useState(1);
@@ -72,7 +72,8 @@ const Interface = ({ BodyTypeSection, setBodyTypeSection }) => {
 							}}
 						/>
 					</div>
-					<button onClick={() => setAppearanceTab(2)}>Skin Tone</button>
+
+					{/* <button onClick={() => setAppearanceTab(2)}>Skin Tone</button>
 					<div
 						className={`${
 							appearanceTab === 2
@@ -80,11 +81,24 @@ const Interface = ({ BodyTypeSection, setBodyTypeSection }) => {
 								: "body-type-container, inactive "
 						} `}
 					>
-						<div className="skin-tone one"></div>
-						<div className="skin-tone two"></div>
-						<div className="skin-tone three"></div>
-						<div className="skin-tone four"></div>
-					</div>
+						<div
+							className="skin-tone one"
+							onClick={setSkinToneColor("#f8a378")}
+						></div>
+						<div
+							className="skin-tone two"
+							onClick={setSkinToneColor("#c87448")}
+						></div>
+						<div
+							className="skin-tone three"
+							onClick={setSkinToneColor("#c87448")}
+						></div>
+						<div
+							className="skin-tone four"
+							onClick={setSkinToneColor("#57321f")}
+						></div>
+					</div> */}
+
 					<button onClick={() => setAppearanceTab(3)}>Hair Style</button>
 					<div
 						className={`${
@@ -232,7 +246,7 @@ const Interface = ({ BodyTypeSection, setBodyTypeSection }) => {
 
 			{/* Displayed Name */}
 			<Html>
-				<div className="displayed-name">{displayedNmae}</div>
+				<div className="displayed-name">{displayedName}</div>
 			</Html>
 
 			{/* Input */}
