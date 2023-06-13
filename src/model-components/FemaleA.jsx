@@ -11,8 +11,6 @@ export default function FemaleA(props) {
 		actions[names[4]].play();
 	}, []);
 
-	// material-color={props.skinTone}
-
 	return (
 		<group ref={group} {...props} dispose={null}>
 			<group name="Female_A" position={[0, -0.9, 0]}>
@@ -677,8 +675,6 @@ export default function FemaleA(props) {
 								morphTargetInfluences={
 									nodes.Set_Character_Female_Torso_3_3.morphTargetInfluences
 								}
-								// Not working...
-								// material-color={props.skinTone}
 							/>
 						</group>
 					</group>
@@ -715,8 +711,6 @@ export default function FemaleA(props) {
 							}
 							position={[0, 1.42, -0.04]}
 							rotation={[Math.PI / 2, Math.PI / 2, 0]}
-							// Not working..
-							// material-color={props.skinTone}
 						/>
 					</group>
 
