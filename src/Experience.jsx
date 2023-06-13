@@ -8,6 +8,7 @@ import { useState } from "react";
 
 export default function Experience() {
 	const [bodyTypeSelection, setBodyTypeSection] = useState(1);
+	const [hairTypeSelection, setHairTypeSection] = useState(1);
 
 	return (
 		<>
@@ -16,17 +17,17 @@ export default function Experience() {
 			<ambientLight intensity={0.5} />
 
 			<Interface
-				// bodyTypeSelection={bodyTypeSelection}
+				bodyTypeSelection={bodyTypeSelection}
 				setBodyTypeSection={setBodyTypeSection}
+				hairTypeSelection={hairTypeSelection}
+				setHairTypeSection={setHairTypeSection}
 			/>
 
-			{/* Model & Hair */}
 			<PresentationControls
 				polar={[0, 0]} // Vertical limits
 				azimuth={[-Infinity, Infinity]} // Horizontal limits
 				rotation={[0, 0.1, 0]}
-				snap={false} // Snap-back to center (can also be a spring config)
-				speed={3} // Speed factor
+				speed={3}
 			>
 				{bodyTypeSelection === 1 && <FemaleA scale={2} />}
 				{bodyTypeSelection === 2 && <FemaleB scale={2} />}

@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { Html } from "@react-three/drei";
 
-const Interface = ({ setBodyTypeSection, setSkinToneColor }) => {
+const Interface = ({
+	bodyTypeSelection,
+	setBodyTypeSection,
+	hairTypeSelection,
+	setHairTypeSection,
+}) => {
 	const [displayedName, setDisplayedName] = useState("");
 	const [appearanceTab, setAppearanceTab] = useState(1);
-
-	const [bodyAppearance, setBodyAppearance] = useState(1);
+	const [factionSelection, setFactionSelection] = useState(null);
+	const [sexSelection, setSexSelection] = useState(2);
 
 	return (
 		<>
@@ -25,11 +30,6 @@ const Interface = ({ setBodyTypeSection, setSkinToneColor }) => {
 						Body Type
 					</button>
 					<div
-						// onClick={() => {
-						// 	setBodyTypeSection(1);
-
-						// 	console.log(BodyTypeSection + "UI");
-						// }}
 						className={`${
 							appearanceTab === 1
 								? "body-type-container, active "
@@ -38,36 +38,33 @@ const Interface = ({ setBodyTypeSection, setSkinToneColor }) => {
 					>
 						<img
 							className={`${
-								bodyAppearance === 1 ? "body-type" : "body-type "
+								bodyTypeSelection === 1 ? "body-type-selected" : "body-type "
 							} `}
 							src="/FemaleA.png"
 							alt="Female A"
 							onClick={() => {
-								setBodyAppearance(1);
 								setBodyTypeSection(1);
 							}}
 						/>
 
 						<img
 							className={`${
-								bodyAppearance === 1 ? "body-type" : "body-type "
+								bodyTypeSelection === 2 ? "body-type-selected" : "body-type "
 							} `}
 							src="/FemaleB.png"
 							alt="Female B"
 							onClick={() => {
-								setBodyAppearance(1);
 								setBodyTypeSection(2);
 							}}
 						/>
 
 						<img
 							className={`${
-								bodyAppearance === 1 ? "body-type" : "body-type "
+								bodyTypeSelection === 3 ? "body-type-selected" : "body-type "
 							} `}
 							src="/FemaleC.png"
 							alt="Female C"
 							onClick={() => {
-								setBodyAppearance(1);
 								setBodyTypeSection(3);
 							}}
 						/>
@@ -107,32 +104,60 @@ const Interface = ({ setBodyTypeSection, setSkinToneColor }) => {
 								: "body-type-container, inactive "
 						} `}
 					>
-						<div className="hair-style">
+						<div
+							className={`${
+								hairTypeSelection === 1 ? "hair-style-selected" : "hair-style "
+							} `}
+						>
 							<img
 								className="female-hair"
 								src="/female-hair-one.png"
 								alt="First choice of female hair"
+								onClick={() => {
+									setHairTypeSection(1);
+								}}
 							/>
 						</div>
-						<div className="hair-style">
+						<div
+							className={`${
+								hairTypeSelection === 2 ? "hair-style-selected" : "hair-style "
+							} `}
+						>
 							<img
 								className="female-hair"
 								src="/female-hair-two.png"
 								alt="First choice of female hair"
+								onClick={() => {
+									setHairTypeSection(2);
+								}}
 							/>
 						</div>
-						<div className="hair-style">
+						<div
+							className={`${
+								hairTypeSelection === 3 ? "hair-style-selected" : "hair-style "
+							} `}
+						>
 							<img
 								className="female-hair"
 								src="/female-hair-three.png"
 								alt="First choice of female hair"
+								onClick={() => {
+									setHairTypeSection(3);
+								}}
 							/>
 						</div>
-						<div className="hair-style">
+						<div
+							className={`${
+								hairTypeSelection === 4 ? "hair-style-selected" : "hair-style "
+							} `}
+						>
 							<img
 								className="female-hair"
 								src="/female-hair-four.png"
 								alt="First choice of female hair"
+								onClick={() => {
+									setHairTypeSection(4);
+								}}
 							/>
 						</div>
 					</div>
@@ -163,20 +188,34 @@ const Interface = ({ setBodyTypeSection, setSkinToneColor }) => {
 
 			{/* Faction */}
 			<Html>
-				<button className="faction-button-one">
+				<button
+					className={`${
+						factionSelection === 1
+							? "selected-faction-button-one"
+							: "faction-button-one"
+					} `}
+				>
 					Faction One
 					<img
 						src="/faction-one.svg"
 						alt="Faction one"
 						className="faction-symbol-one"
+						onClick={() => setFactionSelection(1)}
 					/>
 				</button>
-				<button className="faction-button-two">
+				<button
+					className={`${
+						factionSelection === 2
+							? "selected-faction-button-two"
+							: "faction-button-two"
+					} `}
+				>
 					Faction Two
 					<img
 						src="/faction-two.svg"
 						alt="Faction two"
 						className="faction-symbol-two"
+						onClick={() => setFactionSelection(2)}
 					/>
 				</button>
 			</Html>
@@ -193,54 +232,93 @@ const Interface = ({ setBodyTypeSection, setSkinToneColor }) => {
 						will determine your triumphs and victories in this extraordinary
 						realm.
 					</p>
-					<p className="faction-title">Please Choose Your Faction:</p>
-					<p className="faction-description">
+					<div
+						className={`${
+							factionSelection === null ? "faction-description" : "inactive"
+						} `}
+					>
+						<p className="faction-title">Please Choose Your Faction:</p>
 						<img
 							src="/faction-one.svg"
 							alt="Faction one"
 							className="faction-one-description"
 						/>
-						The Order of the Silver Dawn - Noble warriors committed to justice,
-						protecting the innocent, and restoring peace to the realm.
-					</p>
-					{/* <p>
-						Faction 1: The Order of the Silver Dawn The Order of the Silver Dawn
-						is a renowned faction of noble warriors and valiant defenders.
-						Committed to upholding justice and protecting the innocent, they
-						stand as beacons of hope in a world plagued by darkness. Clad in
-						gleaming armor, their ranks are filled with knights, paladins, and
-						righteous champions who wield weapons imbued with holy power.
-						Through unwavering devotion and a strict code of honor, the Order of
-						the Silver Dawn seeks to vanquish evil, cleanse corrupted lands, and
-						restore peace and balance to the realm. Join their ranks and become
-						a paragon of righteousness, fighting for the greater good and
-						vanquishing all who would threaten the sanctity of Aetheria.
-					</p> */}
-					<p>
+						<p className="faction-description">
+							The Order of the Silver Dawn - Noble warriors committed to
+							justice, protecting the innocent, and restoring peace to the
+							realm.
+						</p>
 						<img
 							src="/faction-two.svg"
 							alt="Faction two"
 							className="faction-two-description"
 						/>
-						The Shadow Syndicate - Masters of secrecy and manipulation, skilled
-						in espionage, assassination, and subterfuge, operating in the
-						shadows to shape the fate of Aetheria.
+						<p>
+							The Shadow Syndicate - Masters of secrecy and manipulation,
+							skilled in espionage, assassination, and subterfuge, operating in
+							the shadows to shape the fate of Aetheria.
+						</p>
+					</div>
+					<div
+						className={`${
+							factionSelection === 1
+								? "selected-faction-description"
+								: "inactive"
+						} `}
+					>
+						<img
+							src="/faction-one.svg"
+							alt="Faction one"
+							className="faction-one-description"
+						/>
+						<p>
+							Faction 1: The Order of the Silver Dawn The Order of the Silver
+							Dawn is a renowned faction of noble warriors and valiant
+							defenders. Committed to upholding justice and protecting the
+							innocent, they stand as beacons of hope in a world plagued by
+							darkness. Clad in gleaming armor, their ranks are filled with
+							knights, paladins, and righteous champions who wield weapons
+							imbued with holy power. Through unwavering devotion and a strict
+							code of honor, the Order of the Silver Dawn seeks to vanquish
+							evil, cleanse corrupted lands, and restore peace and balance to
+							the realm. Join their ranks and become a paragon of righteousness,
+							fighting for the greater good and vanquishing all who would
+							threaten the sanctity of Aetheria.
+						</p>
+					</div>
+					<div
+						className={`${
+							factionSelection === 2 ? "faction-description" : "inactive"
+						} `}
+					>
+						<img
+							src="/faction-two.svg"
+							alt="Faction two"
+							className="faction-two-description"
+						/>
+					</div>
+
+					<p
+						className={`${
+							factionSelection === 2
+								? "selected-faction-description"
+								: "inactive"
+						} `}
+					>
+						Faction 2: Steeped in secrecy and whispers, the Shadow Syndicate is
+						a clandestine faction that operates in the shadows, manipulating
+						events and weaving a web of intrigue. Masters of espionage,
+						assassination, and subterfuge, they thrive in the darkness,
+						exploiting the weaknesses of their enemies. Whether you are a
+						cunning rogue, a skilled spy, or a deadly assassin, the Shadow
+						Syndicate offers you the chance to delve into a world of secrecy and
+						power. With their vast network of informants, expertise in covert
+						operations, and the ability to strike from the shadows, the Shadow
+						Syndicate plays a dangerous game, seeking to control the fate of
+						Aetheria without revealing their true intentions. Embrace the
+						shadows and unlock the true potential of deception and manipulation
+						as you navigate a world where nothing is as it seems.
 					</p>
-					{/* <p>
-							Steeped in secrecy and whispers, the Shadow Syndicate is a
-							clandestine faction that operates in the shadows, manipulating
-							events and weaving a web of intrigue. Masters of espionage,
-							assassination, and subterfuge, they thrive in the darkness,
-							exploiting the weaknesses of their enemies. Whether you are a
-							cunning rogue, a skilled spy, or a deadly assassin, the Shadow
-							Syndicate offers you the chance to delve into a world of secrecy
-							and power. With their vast network of informants, expertise in
-							covert operations, and the ability to strike from the shadows, the
-							Shadow Syndicate plays a dangerous game, seeking to control the
-							fate of Aetheria without revealing their true intentions. Embrace
-							the shadows and unlock the true potential of deception and
-							manipulation as you navigate a world where nothing is as it seems.
-						</p> */}
 				</div>
 			</Html>
 
