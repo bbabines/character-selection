@@ -167,22 +167,34 @@ const Interface = ({
 			{/* Sex */}
 			<Html>
 				<div className="sex-container">
-					<button className="male-button">
-						Male
-						<img
-							src="/male-symbol.png"
-							alt="Male sex symbol"
-							className="male-symbol"
-						/>
-					</button>
-					<button className="female-button">
-						Female
-						<img
-							src="/female-symbol.png"
-							alt="Female sex symbol"
-							className="female-symbol"
-						/>
-					</button>
+					<div onClick={() => setSexSelection(1)}>
+						<button
+							className={`${
+								sexSelection === 1 ? "selected-male-button" : "male-button"
+							}`}
+						>
+							Male
+							<img
+								src="/male-symbol.png"
+								alt="Male sex symbol"
+								className="male-symbol"
+							/>
+						</button>
+					</div>
+					<div onClick={() => setSexSelection(2)}>
+						<button
+							className={`${
+								sexSelection === 2 ? "selected-female-button" : "female-button"
+							}`}
+						>
+							Female
+							<img
+								src="/female-symbol.png"
+								alt="Female sex symbol"
+								className="female-symbol"
+							/>
+						</button>
+					</div>
 				</div>
 			</Html>
 
@@ -224,13 +236,16 @@ const Interface = ({
 			<Html>
 				<div className="description-container">
 					<p className="description">
-						Welcome to the character selection screen of "Legends of Aetheria,"
-						the ultimate action combat MMORPG! In this epic virtual world, you
-						will embark on a thrilling adventure filled with danger, magic, and
-						unimaginable challenges. As you prepare to shape your destiny,
-						choose your character wisely, for their unique abilities and skills
-						will determine your triumphs and victories in this extraordinary
-						realm.
+						Welcome to the character selection screen of Legends of Aetheria!
+					</p>
+					{/* <p>
+						In this epic world, you will embark on a thrilling adventure filled
+						with danger, magic, and unimaginable challenges.
+					</p> */}
+					<p>
+						As you prepare to shape your destiny, choose your character wisely,
+						for their unique abilities and skills will be determined by your
+						faction choice.
 					</p>
 					<div
 						className={`${
@@ -272,18 +287,23 @@ const Interface = ({
 							className="faction-one-description"
 						/>
 						<p>
-							Faction 1: The Order of the Silver Dawn The Order of the Silver
-							Dawn is a renowned faction of noble warriors and valiant
-							defenders. Committed to upholding justice and protecting the
-							innocent, they stand as beacons of hope in a world plagued by
-							darkness. Clad in gleaming armor, their ranks are filled with
-							knights, paladins, and righteous champions who wield weapons
-							imbued with holy power. Through unwavering devotion and a strict
-							code of honor, the Order of the Silver Dawn seeks to vanquish
-							evil, cleanse corrupted lands, and restore peace and balance to
-							the realm. Join their ranks and become a paragon of righteousness,
-							fighting for the greater good and vanquishing all who would
-							threaten the sanctity of Aetheria.
+							The Order of the Silver Dawn is a renowned faction of noble
+							warriors and valiant defenders. Committed to upholding justice and
+							protecting the innocent, they stand as beacons of hope in a world
+							plagued by darkness. Clad in gleaming armor, their ranks are
+							filled with knights, paladins, and righteous champions who wield
+							weapons imbued with holy power. of Aetheria.
+						</p>
+						<p>Skill & Abilities:</p>
+						<p>
+							You main abilities stem from your two-handed weapons which deal
+							devastating damage to your enemies.
+						</p>
+						<p>Gear & Playstyle:</p>
+						<p>
+							In your face sword and board fighting. As an Order of the Silver
+							Dawn, you will not be afraid to rush into a crowd of enemies with
+							your plate armor and hack n' slash your way to victory
 						</p>
 					</div>
 					<div
@@ -305,8 +325,8 @@ const Interface = ({
 								: "inactive"
 						} `}
 					>
-						Faction 2: Steeped in secrecy and whispers, the Shadow Syndicate is
-						a clandestine faction that operates in the shadows, manipulating
+						Steeped in secrecy and whispers, the Shadow Syndicate is a
+						clandestine faction that operates in the shadows, manipulating
 						events and weaving a web of intrigue. Masters of espionage,
 						assassination, and subterfuge, they thrive in the darkness,
 						exploiting the weaknesses of their enemies. Whether you are a

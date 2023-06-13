@@ -154,6 +154,19 @@ button {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+.selected-female-button,
+.selected-male-button {
+	width: 120px;
+	height: 50px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid red;
+}
+
 .male-button:hover,
 .female-button:hover {
 	border: 1px solid white;
@@ -230,7 +243,7 @@ button {
 /* Description */
 
 .description-container {
-	width: 400px;
+	width: 500px;
 	height: 600px;
 
 	text-align: center;
@@ -264,7 +277,7 @@ input {
 .displayed-name {
 	width: 400px;
 
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: 900;
 
 	display: flex;
@@ -272,8 +285,8 @@ input {
 	align-items: center;
 
 	position: absolute;
-	bottom: 12em;
-	left: -6.2em;
+	bottom: 9em;
+	left: -5em;
 }
 
 .name-input-container {
