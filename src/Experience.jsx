@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { OrbitControls, PresentationControls } from "@react-three/drei";
 
 import Interface from "./components/Interface";
 import FemaleA from "./model-components/FemaleA";
 import FemaleB from "./model-components/FemaleB";
 import FemaleC from "./model-components/FemaleC";
-import { useState } from "react";
 
 export default function Experience() {
 	const [bodyTypeSelection, setBodyTypeSection] = useState(1);
@@ -29,7 +29,9 @@ export default function Experience() {
 				rotation={[0, 0.1, 0]}
 				speed={3}
 			>
-				{bodyTypeSelection === 1 && <FemaleA scale={2} />}
+				{bodyTypeSelection === 1 && (
+					<FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
+				)}
 				{bodyTypeSelection === 2 && <FemaleB scale={2} />}
 				{bodyTypeSelection === 3 && <FemaleC scale={2} />}
 			</PresentationControls>

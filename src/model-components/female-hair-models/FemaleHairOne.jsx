@@ -6,10 +6,11 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function FemaleHairOne(props) {
-	const { nodes, materials } = useGLTF("/Female_Hair_1.glb");
+	const { nodes, materials } = useGLTF("/FemaleHairOne.glb");
+
 	return (
 		<group {...props} dispose={null}>
-			<group position={[0, 0, 0]}>
+			<group position={[0, 0, 1]}>
 				<primitive object={nodes.Character_Head} />
 				<skinnedMesh
 					name="Female_Hair_1_1"
@@ -26,4 +27,4 @@ export default function FemaleHairOne(props) {
 	);
 }
 
-useGLTF.preload("/Female_Hair_1.glb");
+useGLTF.preload("/FemaleHairOne.glb");

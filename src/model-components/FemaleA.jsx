@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
-
 import { useGLTF, useAnimations } from "@react-three/drei";
+
+import FemaleHairOne from "./female-hair-models/FemaleHairOne";
 
 export default function FemaleA(props) {
 	const group = useRef();
@@ -715,6 +716,7 @@ export default function FemaleA(props) {
 					</group>
 
 					{/* Hair 4 */}
+
 					<group name="Set_Character_Female_Hair_4">
 						<skinnedMesh
 							name="Set_Character_Female_Hair_4_1"
@@ -733,6 +735,7 @@ export default function FemaleA(props) {
 					</group>
 
 					{/* Hair 3 */}
+
 					<group name="Set_Character_Female_Hair_3">
 						<skinnedMesh
 							name="Set_Character_Female_Hair_3_1"
@@ -751,6 +754,7 @@ export default function FemaleA(props) {
 					</group>
 
 					{/* Hair 2 */}
+
 					<group name="Set_Character_Female_Hair_2">
 						<skinnedMesh
 							name="Set_Character_Female_Hair_2_1"
@@ -785,6 +789,7 @@ export default function FemaleA(props) {
 							rotation={[Math.PI / 2, Math.PI / 2, 0]}
 						/>
 					</group>
+					{/* <FemaleHairOne /> */}
 				</group>
 			</group>
 		</group>
