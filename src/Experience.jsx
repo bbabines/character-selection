@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { OrbitControls, PresentationControls } from "@react-three/drei";
+// import { useThree } from "@react-three/fiber";
 
 import Interface from "./components/Interface";
 import FemaleA from "./model-components/FemaleA";
@@ -12,7 +13,7 @@ export default function Experience() {
 
 	return (
 		<>
-			<OrbitControls makeDefault />
+			{/* <OrbitControls makeDefault /> */}
 			<directionalLight position={[1, 2, 3]} intensity={1.5} />
 			<ambientLight intensity={0.5} />
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
 import FemaleHairOne from "./female-hair-models/FemaleHairOne";
@@ -7,6 +7,8 @@ export default function FemaleA(props) {
 	const group = useRef();
 	const { nodes, materials, animations } = useGLTF("/FemaleA.glb");
 	const { actions, names } = useAnimations(animations, group);
+
+	const [displayHair, setDisplayHair] = useState(4);
 
 	useEffect(() => {
 		actions[names[4]].play();
@@ -716,10 +718,10 @@ export default function FemaleA(props) {
 					</group>
 
 					{/* Hair 4 */}
-
 					<group name="Set_Character_Female_Hair_4">
 						<skinnedMesh
 							name="Set_Character_Female_Hair_4_1"
+							// {displayHair === 4 && null}
 							geometry={nodes.Set_Character_Female_Hair_4_1.geometry}
 							material={materials.Female_Hair_4}
 							skeleton={nodes.Set_Character_Female_Hair_4_1.skeleton}
