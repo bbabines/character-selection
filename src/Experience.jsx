@@ -1,11 +1,18 @@
 import { useState } from "react";
-import { OrbitControls, PresentationControls } from "@react-three/drei";
-// import { useThree } from "@react-three/fiber";
+import {
+	OrbitControls,
+	PresentationControls,
+	GizmoHelper,
+	PivotControls,
+} from "@react-three/drei";
 
 import Interface from "./components/Interface";
 import FemaleA from "./model-components/FemaleA";
 import FemaleB from "./model-components/FemaleB";
 import FemaleC from "./model-components/FemaleC";
+
+import TestA from "./model-components/TestA";
+import MissingBodyPruned from "./model-components/female-hair-models/MissingBodyPruned";
 
 export default function Experience() {
 	const [bodyTypeSelection, setBodyTypeSection] = useState(1);
@@ -30,8 +37,11 @@ export default function Experience() {
 				rotation={[0, 0.1, 0]}
 				speed={3}
 			>
+				{hairTypeSelection === 4 ? <MissingBodyPruned /> : null}
+
 				{bodyTypeSelection === 1 && (
-					<FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
+					<TestA scale={2} hairTypeSelection={hairTypeSelection} />
+					// <FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
 				)}
 				{bodyTypeSelection === 2 && <FemaleB scale={2} />}
 				{bodyTypeSelection === 3 && <FemaleC scale={2} />}
