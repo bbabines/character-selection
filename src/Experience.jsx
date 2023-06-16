@@ -8,8 +8,8 @@ import {
 
 import Interface from "./components/Interface";
 import FemaleA from "./model-components/FemaleA";
-// import FemaleB from "./model-components/FemaleB";
-// import FemaleC from "./model-components/FemaleC";
+import FemaleB from "./model-components/FemaleB";
+import FemaleC from "./model-components/FemaleC";
 
 import FemaleHairFour from "./model-components/female-hair-models/FemaleHairFour";
 
@@ -41,8 +41,12 @@ export default function Experience() {
 				{bodyTypeSelection === 1 && (
 					<FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
 				)}
-				{/* {bodyTypeSelection === 2 && <FemaleB scale={2} />} */}
-				{/* {bodyTypeSelection === 3 && <FemaleC scale={2} />} */}
+				{bodyTypeSelection === 2 && (
+					<FemaleB scale={2} hairTypeSelection={hairTypeSelection} />
+				)}
+				{bodyTypeSelection === 3 && (
+					<FemaleC scale={2} hairTypeSelection={hairTypeSelection} />
+				)}
 			</PresentationControls>
 		</>
 	);
