@@ -12,7 +12,7 @@ export default function FemaleHairFour(props) {
 
 	useEffect(() => {
 		actions[names[4]].reset().play();
-	}, []);
+	}, [props.bodyTypeSelection]);
 
 	return (
 		<group ref={group} {...props} dispose={null}>

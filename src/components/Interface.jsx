@@ -16,6 +16,7 @@ const Interface = ({
 	const htmlRef = useRef();
 	const scaleValue = 0.00055;
 
+	// Minimize UI on screen re-size
 	useFrame(() => {
 		const width = window.innerWidth;
 

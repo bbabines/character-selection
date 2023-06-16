@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-	OrbitControls,
-	PresentationControls,
-	GizmoHelper,
-	PivotControls,
-} from "@react-three/drei";
+import { OrbitControls, PresentationControls } from "@react-three/drei";
 
 import Interface from "./components/Interface";
 import FemaleA from "./model-components/FemaleA";
@@ -36,7 +31,9 @@ export default function Experience() {
 				rotation={[0, 0.1, 0]}
 				speed={3}
 			>
-				{hairTypeSelection === 4 ? <FemaleHairFour /> : null}
+				{hairTypeSelection === 4 ? (
+					<FemaleHairFour bodyTypeSelection={bodyTypeSelection} />
+				) : null}
 
 				{bodyTypeSelection === 1 && (
 					<FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
