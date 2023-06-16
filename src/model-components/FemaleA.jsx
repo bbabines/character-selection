@@ -10,8 +10,6 @@ export default function FemaleA(props) {
 	const { nodes, materials, animations } = useGLTF("/FemaleA.glb");
 	const { actions, names } = useAnimations(animations, group);
 
-	console.log(props.hairTypeSelection);
-
 	useEffect(() => {
 		actions[names[4]].reset().play();
 	}, [props.hairTypeSelection]);
