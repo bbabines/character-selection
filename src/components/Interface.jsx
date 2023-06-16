@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
-
-// import { useThree } from "@react-three/fiber";
 
 const Interface = ({
 	bodyTypeSelection,
@@ -14,7 +13,16 @@ const Interface = ({
 	const [factionSelection, setFactionSelection] = useState(null);
 	const [sexSelection, setSexSelection] = useState(2);
 
-	// const { viewport } = useThree();
+	const htmlRef = useRef();
+	const scaleValue = 0.00055;
+
+	useFrame(() => {
+		const width = window.innerWidth;
+
+		if (htmlRef.current) {
+			htmlRef.current.style.scale = width * scaleValue;
+		}
+	});
 
 	return (
 		<>
@@ -25,6 +33,7 @@ const Interface = ({
 
 			{/* Appearance */}
 			<Html
+				ref={htmlRef}
 				// scale={viewport.width / 5}
 				className="appearance-container"
 			>
