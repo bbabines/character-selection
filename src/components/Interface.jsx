@@ -82,7 +82,40 @@ const Interface = ({
 								}}
 							/>
 						</>
-					) : null}
+					) : (
+						<>
+							<img
+								className={`${
+									bodyTypeSelection === 1 ? "body-type-selected" : "body-type"
+								} `}
+								src="/MaleA.svg"
+								alt="Male A"
+								onClick={() => {
+									setBodyTypeSection(1);
+								}}
+							/>
+							<img
+								className={`${
+									bodyTypeSelection === 2 ? "body-type-selected" : "body-type"
+								} `}
+								src="/MaleB.svg"
+								alt="Male B"
+								onClick={() => {
+									setBodyTypeSection(2);
+								}}
+							/>
+							<img
+								className={`${
+									bodyTypeSelection === 3 ? "body-type-selected" : "body-type"
+								} `}
+								src="/MaleC.svg"
+								alt="Male C"
+								onClick={() => {
+									setBodyTypeSection(3);
+								}}
+							/>
+						</>
+					)}
 				</div>
 
 				{/* </group> */}
