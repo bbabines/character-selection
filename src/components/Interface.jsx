@@ -187,7 +187,7 @@ const Interface = ({
 								<img
 									className="female-hair"
 									src="/female-hair-two.png"
-									alt="First choice of female hair"
+									alt="Second choice of female hair"
 									onClick={() => {
 										setHairTypeSection(2);
 									}}
@@ -203,7 +203,7 @@ const Interface = ({
 								<img
 									className="female-hair"
 									src="/female-hair-three.png"
-									alt="First choice of female hair"
+									alt="Third choice of female hair"
 									onClick={() => {
 										setHairTypeSection(3);
 									}}
@@ -219,14 +219,81 @@ const Interface = ({
 								<img
 									className="female-hair"
 									src="/female-hair-four.png"
-									alt="First choice of female hair"
+									alt="Fourth choice of female hair"
 									onClick={() => {
 										setHairTypeSection(4);
 									}}
 								/>
 							</div>
 						</>
-					) : null}
+					) : (
+						<>
+							<div
+								className={`${
+									hairTypeSelection === 1
+										? "hair-style-selected"
+										: "hair-style "
+								} `}
+							>
+								<img
+									className="female-hair"
+									src="/MaleHairOne.svg"
+									alt="First choice of male hair"
+									onClick={() => {
+										setHairTypeSection(1);
+									}}
+								/>
+							</div>
+							<div
+								className={`${
+									hairTypeSelection === 2
+										? "hair-style-selected"
+										: "hair-style "
+								} `}
+							>
+								<img
+									className="female-hair"
+									src="/MaleHairTwo.svg"
+									alt="Second choice of female hair"
+									onClick={() => {
+										setHairTypeSection(2);
+									}}
+								/>
+							</div>
+							<div
+								className={`${
+									hairTypeSelection === 3
+										? "hair-style-selected"
+										: "hair-style "
+								} `}
+							>
+								<img
+									className="female-hair"
+									src="/MaleHairThree.svg"
+									alt="Third choice of male hair"
+									onClick={() => {
+										setHairTypeSection(3);
+									}}
+								/>
+							</div>
+							<div
+								className={`${
+									hairTypeSelection === 4
+										? "hair-style-selected"
+										: "hair-style "
+								} `}
+							>
+								<img
+									className="female-hair"
+									src="/MaleHairFour.svg"
+									alt="Fourth choice of male hair"
+									onClick={() => {
+										setHairTypeSection(4);
+									}}
+								/>
+							</div>
+						</>
+					)}
 				</div>
 			</Html>
 
