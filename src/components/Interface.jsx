@@ -33,11 +33,7 @@ const Interface = ({
 			</Html>
 
 			{/* Appearance */}
-			<Html
-				ref={htmlRef}
-				// scale={viewport.width / 5}
-				className="appearance-container"
-			>
+			<Html ref={htmlRef} className="appearance-container">
 				<button
 					onClick={() => {
 						setAppearanceTab(1);
@@ -52,38 +48,41 @@ const Interface = ({
 							: "body-type-container, inactive "
 					} `}
 				>
-					<img
-						className={`${
-							bodyTypeSelection === 1 ? "body-type-selected" : "body-type"
-						} `}
-						src="/FemaleA.png"
-						alt="Female A"
-						onClick={() => {
-							setBodyTypeSection(1);
-						}}
-					/>
-
-					<img
-						className={`${
-							bodyTypeSelection === 2 ? "body-type-selected" : "body-type"
-						} `}
-						src="/FemaleB.png"
-						alt="Female B"
-						onClick={() => {
-							setBodyTypeSection(2);
-						}}
-					/>
-
-					<img
-						className={`${
-							bodyTypeSelection === 3 ? "body-type-selected" : "body-type"
-						} `}
-						src="/FemaleC.png"
-						alt="Female C"
-						onClick={() => {
-							setBodyTypeSection(3);
-						}}
-					/>
+					{/* FEMALE BODY SELECTION */}
+					{sexSelection === 2 ? (
+						<>
+							<img
+								className={`${
+									bodyTypeSelection === 1 ? "body-type-selected" : "body-type"
+								} `}
+								src="/FemaleA.png"
+								alt="Female A"
+								onClick={() => {
+									setBodyTypeSection(1);
+								}}
+							/>
+							<img
+								className={`${
+									bodyTypeSelection === 2 ? "body-type-selected" : "body-type"
+								} `}
+								src="/FemaleB.png"
+								alt="Female B"
+								onClick={() => {
+									setBodyTypeSection(2);
+								}}
+							/>
+							<img
+								className={`${
+									bodyTypeSelection === 3 ? "body-type-selected" : "body-type"
+								} `}
+								src="/FemaleC.png"
+								alt="Female C"
+								onClick={() => {
+									setBodyTypeSection(3);
+								}}
+							/>
+						</>
+					) : null}
 				</div>
 
 				{/* </group> */}
@@ -122,62 +121,75 @@ const Interface = ({
 							: "body-type-container, inactive "
 					} `}
 				>
-					<div
-						className={`${
-							hairTypeSelection === 1 ? "hair-style-selected" : "hair-style "
-						} `}
-					>
-						<img
-							className="female-hair"
-							src="/female-hair-one.png"
-							alt="First choice of female hair"
-							onClick={() => {
-								setHairTypeSection(1);
-							}}
-						/>
-					</div>
-					<div
-						className={`${
-							hairTypeSelection === 2 ? "hair-style-selected" : "hair-style "
-						} `}
-					>
-						<img
-							className="female-hair"
-							src="/female-hair-two.png"
-							alt="First choice of female hair"
-							onClick={() => {
-								setHairTypeSection(2);
-							}}
-						/>
-					</div>
-					<div
-						className={`${
-							hairTypeSelection === 3 ? "hair-style-selected" : "hair-style "
-						} `}
-					>
-						<img
-							className="female-hair"
-							src="/female-hair-three.png"
-							alt="First choice of female hair"
-							onClick={() => {
-								setHairTypeSection(3);
-							}}
-						/>
-					</div>
-					<div
-						className={`${
-							hairTypeSelection === 4 ? "hair-style-selected" : "hair-style "
-						} `}
-					>
-						<img
-							className="female-hair"
-							src="/female-hair-four.png"
-							alt="First choice of female hair"
-							onClick={() => {
-								setHairTypeSection(4);
-							}}
-						/>
-					</div>
+					{/* FEMALE HAIR SELECTION */}
+					{sexSelection === 2 ? (
+						<>
+							<div
+								className={`${
+									hairTypeSelection === 1
+										? "hair-style-selected"
+										: "hair-style "
+								} `}
+							>
+								<img
+									className="female-hair"
+									src="/female-hair-one.png"
+									alt="First choice of female hair"
+									onClick={() => {
+										setHairTypeSection(1);
+									}}
+								/>
+							</div>
+							<div
+								className={`${
+									hairTypeSelection === 2
+										? "hair-style-selected"
+										: "hair-style "
+								} `}
+							>
+								<img
+									className="female-hair"
+									src="/female-hair-two.png"
+									alt="First choice of female hair"
+									onClick={() => {
+										setHairTypeSection(2);
+									}}
+								/>
+							</div>
+							<div
+								className={`${
+									hairTypeSelection === 3
+										? "hair-style-selected"
+										: "hair-style "
+								} `}
+							>
+								<img
+									className="female-hair"
+									src="/female-hair-three.png"
+									alt="First choice of female hair"
+									onClick={() => {
+										setHairTypeSection(3);
+									}}
+								/>
+							</div>
+							<div
+								className={`${
+									hairTypeSelection === 4
+										? "hair-style-selected"
+										: "hair-style "
+								} `}
+							>
+								<img
+									className="female-hair"
+									src="/female-hair-four.png"
+									alt="First choice of female hair"
+									onClick={() => {
+										setHairTypeSection(4);
+									}}
+								/>
+							</div>
+						</>
+					) : null}
 				</div>
 			</Html>
 
