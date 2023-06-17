@@ -29,7 +29,11 @@ const Interface = ({
 		<>
 			{/* Background */}
 			<Html transform distanceFactor={4} zIndexRange={[-10000, -10000]}>
-				<img src="/background.jpg" alt="Background picture" />
+				<img
+					src="/background.jpg"
+					alt="Background picture"
+					className="background"
+				/>
 			</Html>
 
 			{/* Appearance */}
