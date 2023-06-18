@@ -163,9 +163,8 @@ button {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Change rbga once male functionality is working */
 .male-button {
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 .selected-female-button,
@@ -184,11 +183,6 @@ button {
 .male-button:hover,
 .female-button:hover {
 	border: 1px solid white;
-}
-
-/* Remove once male functionality is working */
-.male-button:hover {
-	background-color: rgba(210, 14, 14, 0.6);
 }
 
 .male-symbol,

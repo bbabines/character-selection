@@ -2,14 +2,24 @@ import { useState } from "react";
 import { OrbitControls, PresentationControls } from "@react-three/drei";
 
 import Interface from "./components/Interface";
+
 import FemaleA from "./model-components/FemaleA";
 import FemaleB from "./model-components/FemaleB";
 import FemaleC from "./model-components/FemaleC";
+
+import MaleA from "./model-components/MaleA";
+import MaleB from "./model-components/MaleB";
+import MaleC from "./model-components/MaleC";
 
 import FemaleHairOne from "./model-components/female-hair-models/FemaleHairOne";
 import FemaleHairTwo from "./model-components/female-hair-models/FemaleHairTwo";
 import FemaleHairThree from "./model-components/female-hair-models/FemaleHairThree";
 import FemaleHairFour from "./model-components/female-hair-models/FemaleHairFour";
+
+import MaleHairOne from "./model-components/male-hair-models/MaleHairOne";
+import MaleHairTwo from "./model-components/male-hair-models/MaleHairTwo";
+import MaleHairThree from "./model-components/male-hair-models/MaleHairThree";
+import MaleHairFour from "./model-components/male-hair-models/MaleHairFour";
 
 export default function Experience() {
 	const [bodyTypeSelection, setBodyTypeSection] = useState(1);
@@ -34,7 +44,7 @@ export default function Experience() {
 				rotation={[0, 0.1, 0]}
 				speed={3}
 			>
-				{/* HAIR APPEARANCE */}
+				{/* FEMALE HAIR APPEARANCE */}
 
 				{hairTypeSelection === 1 ? (
 					<FemaleHairOne bodyTypeSelection={bodyTypeSelection} />
@@ -52,7 +62,25 @@ export default function Experience() {
 					<FemaleHairFour bodyTypeSelection={bodyTypeSelection} />
 				) : null}
 
-				{/* BODY APPEARANCE */}
+				{/* MALE HAIR APPEARANCE */}
+
+				{hairTypeSelection === 5 ? (
+					<MaleHairOne bodyTypeSelection={bodyTypeSelection} />
+				) : null}
+
+				{hairTypeSelection === 6 ? (
+					<MaleHairTwo bodyTypeSelection={bodyTypeSelection} />
+				) : null}
+
+				{hairTypeSelection === 7 ? (
+					<MaleHairThree bodyTypeSelection={bodyTypeSelection} />
+				) : null}
+
+				{hairTypeSelection === 8 ? (
+					<MaleHairFour bodyTypeSelection={bodyTypeSelection} />
+				) : null}
+
+				{/* FEMALE BODY APPEARANCE */}
 				{bodyTypeSelection === 1 && (
 					<FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
 				)}
@@ -61,6 +89,18 @@ export default function Experience() {
 				)}
 				{bodyTypeSelection === 3 && (
 					<FemaleC scale={2} hairTypeSelection={hairTypeSelection} />
+				)}
+
+				{/* MALE BODY APPEARANCE */}
+
+				{bodyTypeSelection === 4 && (
+					<MaleA scale={2} hairTypeSelection={hairTypeSelection} />
+				)}
+				{bodyTypeSelection === 5 && (
+					<MaleB scale={2} hairTypeSelection={hairTypeSelection} />
+				)}
+				{bodyTypeSelection === 6 && (
+					<MaleC scale={2} hairTypeSelection={hairTypeSelection} />
 				)}
 			</PresentationControls>
 		</>

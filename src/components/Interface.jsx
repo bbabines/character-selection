@@ -90,32 +90,32 @@ const Interface = ({
 						<>
 							<img
 								className={`${
-									bodyTypeSelection === 1 ? "body-type-selected" : "body-type"
+									bodyTypeSelection === 4 ? "body-type-selected" : "body-type"
 								} `}
 								src="/MaleA.svg"
 								alt="Male A"
 								onClick={() => {
-									setBodyTypeSection(1);
+									setBodyTypeSection(4);
 								}}
 							/>
 							<img
 								className={`${
-									bodyTypeSelection === 2 ? "body-type-selected" : "body-type"
+									bodyTypeSelection === 5 ? "body-type-selected" : "body-type"
 								} `}
 								src="/MaleB.svg"
 								alt="Male B"
 								onClick={() => {
-									setBodyTypeSection(2);
+									setBodyTypeSection(5);
 								}}
 							/>
 							<img
 								className={`${
-									bodyTypeSelection === 3 ? "body-type-selected" : "body-type"
+									bodyTypeSelection === 6 ? "body-type-selected" : "body-type"
 								} `}
 								src="/MaleC.svg"
 								alt="Male C"
 								onClick={() => {
-									setBodyTypeSection(3);
+									setBodyTypeSection(6);
 								}}
 							/>
 						</>
@@ -230,7 +230,7 @@ const Interface = ({
 						<>
 							<div
 								className={`${
-									hairTypeSelection === 1
+									hairTypeSelection === 5
 										? "hair-style-selected"
 										: "hair-style "
 								} `}
@@ -240,13 +240,13 @@ const Interface = ({
 									src="/MaleHairOne.svg"
 									alt="First choice of male hair"
 									onClick={() => {
-										setHairTypeSection(1);
+										setHairTypeSection(5);
 									}}
 								/>
 							</div>
 							<div
 								className={`${
-									hairTypeSelection === 2
+									hairTypeSelection === 6
 										? "hair-style-selected"
 										: "hair-style "
 								} `}
@@ -254,15 +254,15 @@ const Interface = ({
 								<img
 									className="female-hair"
 									src="/MaleHairTwo.svg"
-									alt="Second choice of female hair"
+									alt="Second choice of male hair"
 									onClick={() => {
-										setHairTypeSection(2);
+										setHairTypeSection(6);
 									}}
 								/>
 							</div>
 							<div
 								className={`${
-									hairTypeSelection === 3
+									hairTypeSelection === 7
 										? "hair-style-selected"
 										: "hair-style "
 								} `}
@@ -272,13 +272,13 @@ const Interface = ({
 									src="/MaleHairThree.svg"
 									alt="Third choice of male hair"
 									onClick={() => {
-										setHairTypeSection(3);
+										setHairTypeSection(7);
 									}}
 								/>
 							</div>
 							<div
 								className={`${
-									hairTypeSelection === 4
+									hairTypeSelection === 8
 										? "hair-style-selected"
 										: "hair-style "
 								} `}
@@ -288,7 +288,7 @@ const Interface = ({
 									src="/MaleHairFour.svg"
 									alt="Fourth choice of male hair"
 									onClick={() => {
-										setHairTypeSection(4);
+										setHairTypeSection(8);
 									}}
 								/>
 							</div>
@@ -302,11 +302,9 @@ const Interface = ({
 				<div className="sex-container">
 					<div onClick={() => setSexSelection(1)}>
 						<button
-							// className={`${
-							// 	sexSelection === 1 ? "selected-male-button" : "male-button"
-							// }`}
-
-							className="male-button"
+							className={`${
+								sexSelection === 1 ? "selected-male-button" : "male-button"
+							}`}
 						>
 							Male
 							<img

@@ -10,13 +10,13 @@ export default function MaleB(props) {
 	const { nodes, materials, animations } = useGLTF("/MaleB.glb");
 	const { actions, names } = useAnimations(animations, group);
 
-	// useEffect(() => {
-	// 	actions[names[4]].reset().play();
-	// }, [props.hairTypeSelection]);
+	useEffect(() => {
+		actions[names[0]].reset().play();
+	}, [props.hairTypeSelection]);
 
 	return (
 		<group ref={group} {...props} dispose={null}>
-			<group name="Male_B" position={[0, -0.9, 0]}>
+			<group name="Male_B" position={[0, -0.9, 0]} scale={0.89}>
 				<group name="Male_B_1">
 					<group
 						name="Character"
