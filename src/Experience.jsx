@@ -45,63 +45,68 @@ export default function Experience() {
 				speed={3}
 			>
 				{/* FEMALE HAIR APPEARANCE */}
+				<group>
+					{hairTypeSelection === 1 ? (
+						<FemaleHairOne bodyTypeSelection={bodyTypeSelection} />
+					) : null}
 
-				{hairTypeSelection === 1 ? (
-					<FemaleHairOne bodyTypeSelection={bodyTypeSelection} />
-				) : null}
+					{hairTypeSelection === 2 ? (
+						<FemaleHairTwo bodyTypeSelection={bodyTypeSelection} />
+					) : null}
 
-				{hairTypeSelection === 2 ? (
-					<FemaleHairTwo bodyTypeSelection={bodyTypeSelection} />
-				) : null}
+					{hairTypeSelection === 3 ? (
+						<FemaleHairThree bodyTypeSelection={bodyTypeSelection} />
+					) : null}
 
-				{hairTypeSelection === 3 ? (
-					<FemaleHairThree bodyTypeSelection={bodyTypeSelection} />
-				) : null}
-
-				{hairTypeSelection === 4 ? (
-					<FemaleHairFour bodyTypeSelection={bodyTypeSelection} />
-				) : null}
+					{hairTypeSelection === 4 ? (
+						<FemaleHairFour bodyTypeSelection={bodyTypeSelection} />
+					) : null}
+				</group>
 
 				{/* MALE HAIR APPEARANCE */}
+				<group>
+					{hairTypeSelection === 5 ? (
+						<MaleHairOne bodyTypeSelection={bodyTypeSelection} />
+					) : null}
 
-				{hairTypeSelection === 5 ? (
-					<MaleHairOne bodyTypeSelection={bodyTypeSelection} />
-				) : null}
+					{hairTypeSelection === 6 ? (
+						<MaleHairTwo bodyTypeSelection={bodyTypeSelection} />
+					) : null}
 
-				{hairTypeSelection === 6 ? (
-					<MaleHairTwo bodyTypeSelection={bodyTypeSelection} />
-				) : null}
+					{hairTypeSelection === 7 ? (
+						<MaleHairThree bodyTypeSelection={bodyTypeSelection} />
+					) : null}
 
-				{hairTypeSelection === 7 ? (
-					<MaleHairThree bodyTypeSelection={bodyTypeSelection} />
-				) : null}
-
-				{hairTypeSelection === 8 ? (
-					<MaleHairFour bodyTypeSelection={bodyTypeSelection} />
-				) : null}
+					{hairTypeSelection === 8 ? (
+						<MaleHairFour bodyTypeSelection={bodyTypeSelection} />
+					) : null}
+				</group>
 
 				{/* FEMALE BODY APPEARANCE */}
-				{bodyTypeSelection === 1 && (
-					<FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
-				)}
-				{bodyTypeSelection === 2 && (
-					<FemaleB scale={2} hairTypeSelection={hairTypeSelection} />
-				)}
-				{bodyTypeSelection === 3 && (
-					<FemaleC scale={2} hairTypeSelection={hairTypeSelection} />
-				)}
+				<group>
+					{bodyTypeSelection === 1 && (
+						<FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
+					)}
+					{bodyTypeSelection === 2 && (
+						<FemaleB scale={2} hairTypeSelection={hairTypeSelection} />
+					)}
+					{bodyTypeSelection === 3 && (
+						<FemaleC scale={2} hairTypeSelection={hairTypeSelection} />
+					)}
+				</group>
 
 				{/* MALE BODY APPEARANCE */}
-
-				{bodyTypeSelection === 4 && (
-					<MaleA scale={2} hairTypeSelection={hairTypeSelection} />
-				)}
-				{bodyTypeSelection === 5 && (
-					<MaleB scale={2} hairTypeSelection={hairTypeSelection} />
-				)}
-				{bodyTypeSelection === 6 && (
-					<MaleC scale={2} hairTypeSelection={hairTypeSelection} />
-				)}
+				<group>
+					{bodyTypeSelection === 4 && (
+						<MaleA scale={2} hairTypeSelection={hairTypeSelection} />
+					)}
+					{bodyTypeSelection === 5 && (
+						<MaleB scale={2} hairTypeSelection={hairTypeSelection} />
+					)}
+					{bodyTypeSelection === 6 && (
+						<MaleC scale={2} hairTypeSelection={hairTypeSelection} />
+					)}
+				</group>
 			</PresentationControls>
 		</>
 	);

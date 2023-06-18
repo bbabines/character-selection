@@ -300,7 +300,13 @@ const Interface = ({
 			{/* Sex */}
 			<Html>
 				<div className="sex-container">
-					<div onClick={() => setSexSelection(1)}>
+					<div
+						onClick={() => {
+							setSexSelection(1);
+							setBodyTypeSection(4);
+							setHairTypeSection(5);
+						}}
+					>
 						<button
 							className={`${
 								sexSelection === 1 ? "selected-male-button" : "male-button"
@@ -314,7 +320,13 @@ const Interface = ({
 							/>
 						</button>
 					</div>
-					<div onClick={() => setSexSelection(2)}>
+					<div
+						onClick={() => {
+							setSexSelection(2);
+							setBodyTypeSection(1);
+							setHairTypeSection(1);
+						}}
+					>
 						<button
 							className={`${
 								sexSelection === 2 ? "selected-female-button" : "female-button"
