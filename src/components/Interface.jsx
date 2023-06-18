@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Html } from "@react-three/drei";
+import { Html, shaderMaterial } from "@react-three/drei";
+
+// import { vertexShader, fragmentShader } from "./BadFactionShader";
 
 const Interface = ({
 	bodyTypeSelection,
