@@ -253,6 +253,11 @@ button {
 	width: 50px;
 }
 
+.faction-one-description-large,
+.faction-two-description-large {
+	width: 10em;
+}
+
 /* Description */
 
 .description-container {

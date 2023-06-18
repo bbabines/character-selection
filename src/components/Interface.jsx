@@ -430,7 +430,7 @@ const Interface = ({
 						<img
 							src="/faction-one.svg"
 							alt="Faction one"
-							className="faction-one-description"
+							className="faction-one-description-large"
 						/>
 						<p>
 							The Order of the Silver Dawn is a renowned faction of noble
@@ -438,7 +438,7 @@ const Interface = ({
 							protecting the innocent, they stand as beacons of hope in a world
 							plagued by darkness. Clad in gleaming armor, their ranks are
 							filled with knights, paladins, and righteous champions who wield
-							weapons imbued with holy power. of Aetheria.
+							weapons imbued with holy power of Aetheria.
 						</p>
 						<p>Skill & Abilities:</p>
 						<p>
@@ -447,9 +447,10 @@ const Interface = ({
 						</p>
 						<p>Gear & Playstyle:</p>
 						<p>
-							In your face sword and board fighting. As an Order of the Silver
-							Dawn, you will not be afraid to rush into a crowd of enemies with
-							your plate armor and hack n' slash your way to victory
+							In your face sword and board fighting or high damage 2-handed
+							attacks. As an Order of the Silver Dawn, you will not be afraid to
+							rush into a crowd of enemies with your plate armor and hack n'
+							slash your way to victory
 						</p>
 					</div>
 					<div
@@ -460,11 +461,11 @@ const Interface = ({
 						<img
 							src="/faction-two.svg"
 							alt="Faction two"
-							className="faction-two-description"
+							className="faction-two-description-large"
 						/>
 					</div>
 
-					<p
+					<div
 						className={`${
 							factionSelection === 2
 								? "selected-faction-description"
@@ -473,18 +474,21 @@ const Interface = ({
 					>
 						Steeped in secrecy and whispers, the Shadow Syndicate is a
 						clandestine faction that operates in the shadows, manipulating
-						events and weaving a web of intrigue. Masters of espionage,
-						assassination, and subterfuge, they thrive in the darkness,
-						exploiting the weaknesses of their enemies. Whether you are a
-						cunning rogue, a skilled spy, or a deadly assassin, the Shadow
-						Syndicate offers you the chance to delve into a world of secrecy and
-						power. With their vast network of informants, expertise in covert
-						operations, and the ability to strike from the shadows, the Shadow
-						Syndicate plays a dangerous game, seeking to control the fate of
-						Aetheria without revealing their true intentions. Embrace the
-						shadows and unlock the true potential of deception and manipulation
-						as you navigate a world where nothing is as it seems.
-					</p>
+						events and weaving a web of intrigue. They use tricks, poisons, and
+						stealth to bring their opponents to their knees.
+						<p>Skill & Abilities:</p>
+						<p>
+							You main abilities utilize dual weapons and speed to overwhelm
+							your enemies.
+						</p>
+						<p>Gear & Playstyle:</p>
+						<p>
+							Being part of the Shadow Syndicate means you will be wearing cloth
+							and leather armor while sneaking around trying to get the most
+							advantageous strikes before your opponent realizes what is
+							happening.
+						</p>
+					</div>
 				</div>
 			</Html>
 
