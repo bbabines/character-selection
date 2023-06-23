@@ -22,30 +22,10 @@ import MaleHairTwo from "./model-components/male-hair-models/MaleHairTwo";
 import MaleHairThree from "./model-components/male-hair-models/MaleHairThree";
 import MaleHairFour from "./model-components/male-hair-models/MaleHairFour";
 
-import testVertexShader from "./components/shaders/vertext.glsl";
-import testFragmentShader from "./components/shaders/fragment.glsl";
-
 export default function Experience() {
 	const [bodyTypeSelection, setBodyTypeSection] = useState(1);
 	const [hairTypeSelection, setHairTypeSection] = useState(1);
 	const meshRef = useRef();
-
-	// Vertex shader
-	const vertexShader = `
-	  void main() {
-	    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-	  }
-	`;
-
-	// Fragment shader
-	const fragmentShader = `
-	precision mediump float;
-
-	void main()
-	{
-	    gl_FragColor = vec4(1.0, 1.0, 0.0, 1.0);
-	}
-	`;
 
 	return (
 		<>
@@ -66,26 +46,6 @@ export default function Experience() {
 				rotation={[0, 0.1, 0]}
 				speed={3}
 			>
-				{/* <mesh ref={meshRef}>
-					<boxGeometry args={[1, 1, 1]} />
-					<shaderMaterial
-						fragmentShader={testVertexShader}
-						vertexShader={testFragmentShader}
-					/>
-				</mesh> */}
-
-				<mesh>
-					<planeGeometry args={[1, 1]} />
-					<shaderMaterial
-						args={[
-							{
-								vertexShader,
-								fragmentShader,
-							},
-						]}
-					/>
-				</mesh>
-
 				{/* FEMALE HAIR APPEARANCE */}
 				<group>
 					{hairTypeSelection === 1 ? (
