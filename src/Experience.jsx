@@ -20,10 +20,12 @@ import MaleHairOne from "./model-components/male-hair-models/MaleHairOne";
 import MaleHairTwo from "./model-components/male-hair-models/MaleHairTwo";
 import MaleHairThree from "./model-components/male-hair-models/MaleHairThree";
 import MaleHairFour from "./model-components/male-hair-models/MaleHairFour";
+import LoadingScreen from "./components/LoadingScreen";
 
 export default function Experience() {
 	const [bodyTypeSelection, setBodyTypeSection] = useState(1);
 	const [hairTypeSelection, setHairTypeSection] = useState(1);
+	const [loadingStarted, setLoadingStarted] = useState(false);
 
 	return (
 		<>
@@ -31,83 +33,92 @@ export default function Experience() {
 			<directionalLight position={[1, 2, 3]} intensity={1.5} />
 			<ambientLight intensity={0.5} />
 
-			<Interface
-				bodyTypeSelection={bodyTypeSelection}
-				setBodyTypeSection={setBodyTypeSection}
-				hairTypeSelection={hairTypeSelection}
-				setHairTypeSection={setHairTypeSection}
+			<LoadingScreen
+				loadingStarted={loadingStarted}
+				setLoadingStarted={setLoadingStarted}
 			/>
 
-			<PresentationControls
-				polar={[0, 0]} // Vertical limits
-				azimuth={[-Infinity, Infinity]} // Horizontal limits
-				rotation={[0, 0.1, 0]}
-				speed={3}
-			>
-				{/* FEMALE HAIR APPEARANCE */}
-				<group>
-					{hairTypeSelection === 1 ? (
-						<FemaleHairOne bodyTypeSelection={bodyTypeSelection} />
-					) : null}
+			{loadingStarted && (
+				<Interface
+					bodyTypeSelection={bodyTypeSelection}
+					setBodyTypeSection={setBodyTypeSection}
+					hairTypeSelection={hairTypeSelection}
+					setHairTypeSection={setHairTypeSection}
+				/>
+			)}
 
-					{hairTypeSelection === 2 ? (
-						<FemaleHairTwo bodyTypeSelection={bodyTypeSelection} />
-					) : null}
+			{loadingStarted && (
+				<PresentationControls
+					polar={[0, 0]} // Vertical limits
+					azimuth={[-Infinity, Infinity]} // Horizontal limits
+					rotation={[0, 0.1, 0]}
+					speed={3}
+				>
+					{/* FEMALE HAIR APPEARANCE */}
+					<group>
+						{hairTypeSelection === 1 ? (
+							<FemaleHairOne bodyTypeSelection={bodyTypeSelection} />
+						) : null}
 
-					{hairTypeSelection === 3 ? (
-						<FemaleHairThree bodyTypeSelection={bodyTypeSelection} />
-					) : null}
+						{hairTypeSelection === 2 ? (
+							<FemaleHairTwo bodyTypeSelection={bodyTypeSelection} />
+						) : null}
 
-					{hairTypeSelection === 4 ? (
-						<FemaleHairFour bodyTypeSelection={bodyTypeSelection} />
-					) : null}
-				</group>
+						{hairTypeSelection === 3 ? (
+							<FemaleHairThree bodyTypeSelection={bodyTypeSelection} />
+						) : null}
 
-				{/* MALE HAIR APPEARANCE */}
-				<group>
-					{hairTypeSelection === 5 ? (
-						<MaleHairOne bodyTypeSelection={bodyTypeSelection} />
-					) : null}
+						{hairTypeSelection === 4 ? (
+							<FemaleHairFour bodyTypeSelection={bodyTypeSelection} />
+						) : null}
+					</group>
 
-					{hairTypeSelection === 6 ? (
-						<MaleHairTwo bodyTypeSelection={bodyTypeSelection} />
-					) : null}
+					{/* MALE HAIR APPEARANCE */}
+					<group>
+						{hairTypeSelection === 5 ? (
+							<MaleHairOne bodyTypeSelection={bodyTypeSelection} />
+						) : null}
 
-					{hairTypeSelection === 7 ? (
-						<MaleHairThree bodyTypeSelection={bodyTypeSelection} />
-					) : null}
+						{hairTypeSelection === 6 ? (
+							<MaleHairTwo bodyTypeSelection={bodyTypeSelection} />
+						) : null}
 
-					{hairTypeSelection === 8 ? (
-						<MaleHairFour bodyTypeSelection={bodyTypeSelection} />
-					) : null}
-				</group>
+						{hairTypeSelection === 7 ? (
+							<MaleHairThree bodyTypeSelection={bodyTypeSelection} />
+						) : null}
 
-				{/* FEMALE BODY APPEARANCE */}
-				<group>
-					{bodyTypeSelection === 1 && (
-						<FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
-					)}
-					{bodyTypeSelection === 2 && (
-						<FemaleB scale={2} hairTypeSelection={hairTypeSelection} />
-					)}
-					{bodyTypeSelection === 3 && (
-						<FemaleC scale={2} hairTypeSelection={hairTypeSelection} />
-					)}
-				</group>
+						{hairTypeSelection === 8 ? (
+							<MaleHairFour bodyTypeSelection={bodyTypeSelection} />
+						) : null}
+					</group>
 
-				{/* MALE BODY APPEARANCE */}
-				<group>
-					{bodyTypeSelection === 4 && (
-						<MaleA scale={2} hairTypeSelection={hairTypeSelection} />
-					)}
-					{bodyTypeSelection === 5 && (
-						<MaleB scale={2} hairTypeSelection={hairTypeSelection} />
-					)}
-					{bodyTypeSelection === 6 && (
-						<MaleC scale={2} hairTypeSelection={hairTypeSelection} />
-					)}
-				</group>
-			</PresentationControls>
+					{/* FEMALE BODY APPEARANCE */}
+					<group>
+						{bodyTypeSelection === 1 && (
+							<FemaleA scale={2} hairTypeSelection={hairTypeSelection} />
+						)}
+						{bodyTypeSelection === 2 && (
+							<FemaleB scale={2} hairTypeSelection={hairTypeSelection} />
+						)}
+						{bodyTypeSelection === 3 && (
+							<FemaleC scale={2} hairTypeSelection={hairTypeSelection} />
+						)}
+					</group>
+
+					{/* MALE BODY APPEARANCE */}
+					<group>
+						{bodyTypeSelection === 4 && (
+							<MaleA scale={2} hairTypeSelection={hairTypeSelection} />
+						)}
+						{bodyTypeSelection === 5 && (
+							<MaleB scale={2} hairTypeSelection={hairTypeSelection} />
+						)}
+						{bodyTypeSelection === 6 && (
+							<MaleC scale={2} hairTypeSelection={hairTypeSelection} />
+						)}
+					</group>
+				</PresentationControls>
+			)}
 		</>
 	);
 }

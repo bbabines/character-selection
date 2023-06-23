@@ -339,3 +339,42 @@ input {
 .create-character-button:hover {
 	background-color: rgba(210, 14, 14, 0.6);
 }
+
+/* LOADING SCREEN */
+
+.loading-screen-started {
+	/* position: absolute; */
+	/* bottom: -25em; */
+	/* right: -20em; */
+
+	opacity: 1000;
+}
+
+.loading-screen-image {
+	height: 100em;
+	width: 150em;
+
+	position: absolute;
+	bottom: -35em;
+	right: -70em;
+
+	/* height: 100vh; */
+	/* width: 100vw; */
+	/* background-size: cover; */
+	/* background-size: contain; */
+}
+
+.loading-screen-finished {
+	display: none;
+	opacity: 0;
+}
+
+.progress-tracker {
+	color: white;
+	font-size: 3rem;
+	width: 10em;
+
+	position: absolute;
+	top: -4em;
+	right: -7em;
+}
