@@ -1,5 +1,4 @@
-import { useState, useRef } from "react";
-import * as THREE from "three";
+import { useState } from "react";
 import { OrbitControls, PresentationControls } from "@react-three/drei";
 
 import Interface from "./components/Interface";
@@ -25,7 +24,6 @@ import MaleHairFour from "./model-components/male-hair-models/MaleHairFour";
 export default function Experience() {
 	const [bodyTypeSelection, setBodyTypeSection] = useState(1);
 	const [hairTypeSelection, setHairTypeSection] = useState(1);
-	const meshRef = useRef();
 
 	return (
 		<>

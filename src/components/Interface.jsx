@@ -1,8 +1,6 @@
 import { useState, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Html, shaderMaterial } from "@react-three/drei";
-
-// import { vertexShader, fragmentShader } from "./BadFactionShader";
+import { Html } from "@react-three/drei";
 
 const Interface = ({
 	bodyTypeSelection,
@@ -16,16 +14,16 @@ const Interface = ({
 	const [sexSelection, setSexSelection] = useState(2);
 
 	const htmlRef = useRef();
-	const scaleValue = 0.00055;
+	const scaleValue = 0.00075;
 
 	// Minimize UI on screen re-size
-	useFrame(() => {
-		const width = window.innerWidth;
+	// useFrame(() => {
+	// 	const width = window.innerWidth;
 
-		if (htmlRef.current) {
-			htmlRef.current.style.scale = width * scaleValue;
-		}
-	});
+	// 	if (htmlRef.current) {
+	// 		htmlRef.current.style.scale = width * scaleValue;
+	// 	}
+	// });
 
 	return (
 		<>
@@ -39,7 +37,11 @@ const Interface = ({
 			</Html>
 
 			{/* Appearance */}
-			<Html ref={htmlRef} className="appearance-container">
+			<Html
+				// ref={htmlRef}
+
+				className="appearance-container"
+			>
 				<button
 					onClick={() => {
 						setAppearanceTab(1);
